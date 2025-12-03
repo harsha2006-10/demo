@@ -7,7 +7,7 @@ This project is designed to demonstrate core web development skills — DOM mani
 
 ## 🚀 Live Demo
 👉 **Demo:** https://your-demo-link-here  
-👉 **Source Code:** https://github.com/your-username/your-repo
+👉 **Source Code:** https://github.com/harsha2006-10/demo
 
 (Replace the links above with your actual URLs)
 
