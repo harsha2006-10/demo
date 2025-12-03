@@ -1,0 +1,55 @@
+:root{
+  --bg:#0f1724; --card:#111827; --accent:#2196F3; --muted:#9aa4bf; --glass: rgba(255,255,255,0.03);
+  --radius:12px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family: Inter, "Segoe UI", system-ui, Roboto, sans-serif;
+  margin:0; background:linear-gradient(180deg,#071028 0%, #0f1724 100%);
+  color:#e6eef8; display:flex; align-items:center; justify-content:center; padding:32px;
+}
+.container{width:100%;max-width:820px}
+header{margin-bottom:18px;text-align:center}
+h1{font-size:2rem;margin:0}
+.sub{color:var(--muted);margin-top:6px;font-size:0.95rem}
+
+.todo-app{
+  background:var(--card); border-radius:var(--radius); padding:20px; box-shadow:0 8px 30px rgba(2,6,23,0.6);
+  border:1px solid rgba(255,255,255,0.03);
+}
+#todo-form{display:flex;gap:10px;margin-bottom:14px}
+#todo-form input{
+  flex:1;padding:12px 14px;border-radius:10px;border:none;background:var(--glass);color:inherit;font-size:1rem;
+  outline: none;
+}
+.btn{
+  background:linear-gradient(135deg,var(--accent),#1976D2);
+  color:white;border:none;padding:10px 14px;border-radius:10px;font-weight:600;cursor:pointer;
+}
+.controls{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:12px}
+.filters{display:flex;gap:8px}
+.filter{background:transparent;border:none;color:var(--muted);padding:6px 10px;border-radius:8px;cursor:pointer}
+.filter.active{color:var(--accent);background:rgba(33,150,243,0.06);font-weight:600}
+.actions{display:flex;gap:8px;align-items:center}
+.small{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:6px 10px;border-radius:8px;color:var(--muted);cursor:pointer}
+.upload-label{display:inline-flex;align-items:center;gap:6px;cursor:pointer}
+
+.todo-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.todo-item{
+  display:flex;align-items:center;gap:12px;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+  border:1px solid rgba(255,255,255,0.02);
+}
+.todo-item .left{display:flex;align-items:center;gap:12px;flex:1}
+.checkbox{width:18px;height:18px;border-radius:4px;border:2px solid rgba(255,255,255,0.06);display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.checkbox.checked{background:linear-gradient(135deg,var(--accent),#1976D2);border:none;color:white;font-size:12px}
+.task-text{font-size:1rem;color:inherit;max-width:100%}
+.task-text.completed{opacity:0.5;text-decoration:line-through;color:var(--muted)}
+.actions-right{display:flex;gap:8px}
+.icon-btn{background:transparent;border:none;color:var(--muted);cursor:pointer;padding:6px;border-radius:8px}
+.icon-btn:hover{color:var(--accent);background:rgba(33,150,243,0.03)}
+
+.empty{color:var(--muted);text-align:center;padding:18px;margin-top:10px;border-radius:10px;border:1px dashed rgba(255,255,255,0.02)}
+.foot{text-align:center;margin-top:16px;color:var(--muted)}
+a{color:var(--accent)}
+@media (max-width:520px){body{padding:18px}.controls{flex-direction:column;align-items:stretch}}

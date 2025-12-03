@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Todo — Harsha Vardhan</title>
+  <link rel="stylesheet" href="demo.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Todo List</h1>
+      <p class="sub">Simple, fast & offline — saves to your browser</p>
+    </header>
+
+    <section class="todo-app">
+      <form id="todo-form" aria-label="Add todo">
+        <input id="todo-input" placeholder="Add a new task..." autocomplete="off" />
+        <button type="submit" class="btn">Add</button>
+      </form>
+
+      <div class="controls">
+        <div class="filters">
+          <button data-filter="all" class="filter active">All</button>
+          <button data-filter="active" class="filter">Active</button>
+          <button data-filter="completed" class="filter">Completed</button>
+        </div>
+        <div class="actions">
+          <button id="clear-completed" class="small">Clear completed</button>
+          <button id="export-json" class="small">Export</button>
+          <label class="small upload-label">
+            Import
+            <input id="import-file" type="file" accept="application/json" hidden/>
+          </label>
+        </div>
+      </div>
+
+      <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+
+      <div id="empty" class="empty">No tasks yet — add your first task!</div>
+    </section>
+
+    <footer class="foot">
+      <small>Built by Harsha Vardhan • <a href="https://github.com/yourusername/your-repo" target="_blank" rel="noopener">Source</a></small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
